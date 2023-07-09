@@ -1,0 +1,78 @@
+{
+  "name": "react-standolone",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/react-standolone"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-standolone:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-standolone:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "react-standolone:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-standolone:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-standolone:build:development"
+        },
+        "production": {
+          "buildTarget": "react-standolone:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/react-standolone"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "coverage/react-standolone"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "react-standolone:build"
+      }
+    }
+  },
+  "tags": []
+}
