@@ -1,15 +1,14 @@
 import styled from 'styled-components';
-
-import NxWelcome from './nx-welcome';
+import HelloWorld from './hello-world/hello-world';
 
 const StyledApp = styled.div`
-  // Your style here
+  display: block;
 `;
 
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title="react-standolone" />
+      <HelloWorld />
     </StyledApp>
   );
 }
