@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@react-standolone/modules/orders": ["modules/orders/src/index.ts"],
-      "@react-standolone/modules/products": ["modules/products/src/index.ts"],
-      "@react-standolone/modules/shared/ui": ["modules/shared/ui/src/index.ts"]
+      "@react-standalone/modules/orders": ["modules/orders/src/index.ts"],
+      "@react-standalone/modules/products": ["modules/products/src/index.ts"],
+      "@react-standalone/modules/shared/ui": ["modules/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,5 +1,5 @@
 {
-  "name": "react-standolone",
+  "name": "react-standalone",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/react-standolone"
+        "outputPath": "dist/react-standalone"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "react-standolone:build"
+        "buildTarget": "react-standalone:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "react-standolone:build:development",
+          "buildTarget": "react-standalone:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "react-standolone:build:production",
+          "buildTarget": "react-standalone:build:production",
           "hmr": false
         }
       }
@@ -41,23 +41,23 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "react-standolone:build"
+        "buildTarget": "react-standalone:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "react-standolone:build:development"
+          "buildTarget": "react-standalone:build:development"
         },
         "production": {
-          "buildTarget": "react-standolone:build:production"
+          "buildTarget": "react-standalone:build:production"
         }
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/react-standolone"],
+      "outputs": ["coverage/react-standalone"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "coverage/react-standolone"
+        "reportsDirectory": "coverage/react-standalone"
       }
     },
     "lint": {
@@ -70,7 +70,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "react-standolone:build"
+        "buildTarget": "react-standalone:build"
       }
     }
   },
